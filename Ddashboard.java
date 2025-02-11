@@ -123,7 +123,7 @@ class Ddashboard extends JFrame {
                     String formattedEndTime = timeFormat.format(endTime);
 
                     String url = "jdbc:mysql://localhost:3306/hospital";
-                    try (Connection con = DriverManager.getConnection(url, "root", "Shlok2401@")) {
+                    try (Connection con = DriverManager.getConnection(url, "root", "sqlpassword")) {
                         String sql = "INSERT INTO available_doctors (doctor_name, available_date_from, available_date_to, available_start_time, available_end_time) VALUES (?, ?, ?, ?, ?)";
                         try (PreparedStatement pst = con.prepareStatement(sql)) {
                             pst.setString(1, username);
