@@ -58,7 +58,7 @@ class Dlogin extends JFrame {
                 a->
                 {
                     String url = "jdbc:mysql://localhost:3306/hospital";
-                    try(Connection con = DriverManager.getConnection(url,"root","Shlok2401@"))
+                    try(Connection con = DriverManager.getConnection(url,"root","sqlpassword"))
                     {
                         String sql = "select * from doctors where username=? and password=?";
                         try(PreparedStatement pst = con.prepareStatement(sql))
